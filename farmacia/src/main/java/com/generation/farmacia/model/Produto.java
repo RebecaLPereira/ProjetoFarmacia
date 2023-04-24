@@ -24,11 +24,10 @@ public class Produto {
 	@Size(min = 5, max = 100, message = "O atributo nome deve conter no mínimo 05 e no máximo 100 caracteres")
 	private String nome;
 	
-	@NotBlank
 	private double preco;
-	
+
 	@ManyToOne
-	@JsonIgnoreProperties("listaProduto")
+	@JsonIgnoreProperties("listaProdutos")
 	private Categoria categoriaProduto;
 
 	public Long getId() {
